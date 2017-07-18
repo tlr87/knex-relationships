@@ -1,11 +1,16 @@
 
 module.exports = {
   getUser: getUser,
-  getUsers: getUsers
+  getUsers: getUsers,
+  getProfiles: getProfiles
 }
 
 function getUsers (connection) {
   return connection('users').select()
+}
+
+function getProfiles (connection) {
+  return connection('profiles').select()
 }
 
 function getUser (id, connection) {

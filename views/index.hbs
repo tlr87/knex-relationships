@@ -6,8 +6,10 @@
   <body>
     <ul>
     {{#each users}}
-      <li>{{name}} ({{email}})</li>
+      <li> <a href="/{{id}}" >{{name}} </a> ({{email}})</li>
     {{/each}}
     </ul>
+  </br>
+  <a href="/add">Add</a>
   </body>
 </html>

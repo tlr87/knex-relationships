@@ -13,6 +13,21 @@ router.get('/', function (req, res) {
     })
 })
 
+router.get('/add', function(req, res) {
+  res.render("edit")
+})
+
+
+
+router.post('/add', function(req, res) {
+      // db.getUsers(req.app.get('connection'))
+      // console.log(req.body.name);
+      //         knex('wombles').insert(req.body).then(function(){
+                res.redirect("/")
+    // })
+
+})
+
 
 
 router.get('/:id', function (req, res) {
@@ -27,6 +42,9 @@ router.get('/:id', function (req, res) {
        res.status(500).send('DATABASE ERROR: ' + err.message)
      })
 })
+
+
+
 
 
 
